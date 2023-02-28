@@ -35,7 +35,6 @@ const FlexColWrapper = styled("div")({
 export default function Modal({show,setShow,data,tags}:IModal) {
   const { theme } = useThemeConsumer();
     const tagsReduced=tags.slice(0,11)
-   console.log(tagsReduced,'TR')
   return (
     <Dialog
       open={show}

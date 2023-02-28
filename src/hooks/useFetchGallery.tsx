@@ -4,7 +4,7 @@ import useAjax from './useAjax';
 
 ;
 const baseUrl = "https://api.unsplash.com/";
-const access_key = "7mvLD8H1fIPsZIXp7ysul1klXEnSCa-Vzs_Fp2gaLWc";
+
 const useFetchGallery = () => {
 
 const [search,setSearch]=useState<any>();
@@ -16,7 +16,7 @@ const { data, loading, error, setData, setLoading,request,setError } = useAjax()
      if (search !==undefined){
       setLoading(true);
       request(
-        `${baseUrl}search/photos?client_id=${access_key}&page=${page}&query=${search}`
+        `${baseUrl}search/photos?client_id=${process.env.REACT_APP_ACCESS_KEY}&page=${page}&query=${search}`
       )
         .then((res) => {
           const newData: any[] = res.results;
@@ -29,7 +29,7 @@ const { data, loading, error, setData, setLoading,request,setError } = useAjax()
         .finally(() => setLoading(false));
      } else if (search===undefined || search=== ''){
       setLoading(true);
-      request(`${baseUrl}photos?client_id=${access_key}&page=4`)
+      request(`${baseUrl}photos?client_id=${process.env.REACT_APP_ACCESS_KEY}&page=4`)
         .then((res) => {
           setData(res);
         })

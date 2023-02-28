@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+.w-80{
+  width: 80rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.w-50{
+  width:50rem ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading{
+font-family: 'Pattaya';
+font-weight: 400;
+font-size: 30px;
+line-height: 42px;
+margin-right: 10rem;
+margin-left: 10rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fs-3{
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.text-xxs{
+  font-size: 1.3rem;
+  opacity: 0.6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mt-13{
+  margin-top: 10rem;
 }
+
+.mb-11{
+  margin-bottom: 11rem;
+}
+
+
+
+.pl-150{
+padding-left: 9.3rem;
+}
+
+.pr-150{
+padding-right: 9.3rem;
+}
+
+.w-26{
+  width: 26rem;
+}
+
+.gap-headers{
+  gap: 2.25rem;
+}
+
+.ml-headers{
+margin-left:1.6rem
+}
+
+
+
+.fs-style{
+font-size: 0.75rem;
+font-family: Montserrat;
+font-weight: 700;
+line-height: 1px;
+letter-spacing: 0em;
+}
+.ml-darkToggle{
+margin-left: 5.5rem;
+}
+
+.navbar{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 9.3rem;
+padding-right: 9.3rem;
+height: 6rem;
+margin-top: 1rem;
+width: 71.25rem;
+}
+
+
+
+.banner-header{
+font-family: 'Montserrat', sans-serif;
+font-size: 2rem;
+font-weight: 43.75rem;
+line-height: 2.43rem;
+letter-spacing: -0.02em;
+margin-bottom: 1.06rem;
+margin-top: 6rem;
+}
+
+.banner-title{
+font-family: 'Montserrat', sans-serif;
+font-size: 1rem;
+font-weight: 31.25rem;
+line-height: 1.06rem;
+letter-spacing: 0em;
+margin-bottom: 1rem;
+}
+
+.w-banner-search-bar{
+  width: 50.5rem;
+  border-radius: 8px;
+  height: 54px;
+  margin-left: 4rem;
+}
+
+
+
+.nav-search-bar{
+  width: 26.18rem;
+  height: 2.68rem;
+  margin-left: 4rem;
+
+}
+
+.fs-darkToggle{
+width: 9rem;
+}
+
+.logo{
+font-family: Pattaya;
+font-size: 1.8rem;
+font-weight: 25rem;
+line-height: 2.6rem;
+letter-spacing: 0em;
+padding: 3;
+}
+

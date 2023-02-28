@@ -55,7 +55,7 @@ export default function Modal({show,setShow,data,tags}:IModal) {
                   maxWidth: "55rem",
                   height: "100%",
                   maxHeight: "42rem",
-                  marginTop: "1rem",
+                  marginTop: "0.7rem",
                   marginLeft: "6rem",
                   overflowX: "hidden",
                   overflowY: "auto",
@@ -69,7 +69,7 @@ export default function Modal({show,setShow,data,tags}:IModal) {
                   maxWidth: "55rem",
                   height: "100%",
                   maxHeight: "42rem",
-                  marginTop: "2.8rem",
+                  marginTop: "0.7rem",
                   marginLeft: "6rem",
                   overflowX: "hidden",
                   overflowY: "auto",
@@ -185,9 +185,7 @@ export default function Modal({show,setShow,data,tags}:IModal) {
                     gap: "16rem",
                   }
             }
-            sx={
-              {gap:"18rem"}
-            }
+            sx={{ gap: "18rem" }}
           >
             <FlexRowWrapper style={{ gap: "0.78rem" }}>
               <FlexRowWrapper style={{ gap: "0.1rem" }}>

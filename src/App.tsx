@@ -4,6 +4,8 @@ import { Toaster } from "react-hot-toast";
 import MainRouter from "./Router";
 import './App.css'
 import ThemeProvider from "./component/ThemeProvider/ThemeProvider";
+
+
 function App() {
   return (
       <ThemeProvider>

@@ -19,6 +19,7 @@ const Tags = ({names,sx}:ITags) => {
         justifyContent: "center",
       }}
     >
+      
       <Tabs
         variant="scrollable"
         scrollButtons="auto"
@@ -33,11 +34,13 @@ const Tags = ({names,sx}:ITags) => {
           gap: "1rem",
         }}
        sx={sx}
+      //  value={names.length && ''}
       >
-        {names?.map((name: string) => {
+        {names?.map((name: string,index:number) => {
           return (
             <Tab
               label={name}
+              value={index}
               style={
                 theme === themeEnum.light
                   ? {

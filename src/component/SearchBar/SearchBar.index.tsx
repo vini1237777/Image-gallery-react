@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   IconButton,
   InputBase,
@@ -8,25 +8,28 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import useThemeConsumer from "../ThemeProvider/useThemeConsumer";
 import { themeEnum } from "../ThemeProvider/ThemeProvider";
+import useFetchGallery from "../../hooks/useFetchGallery";
 
 interface ISearchBar {
   placeholder: string;
   width?: { width: string };
   searchValue: string;
   onSearch: any;
-  style:any
+  style:any;
+  
 }
 
 
-const SearchBar = ({
+const SearchBar = React.forwardRef(({
   placeholder,
   searchValue,
   onSearch,
-  style
-}: ISearchBar) => {
+  style,
+
+}: ISearchBar,ref) => {
 
   const { theme } = useThemeConsumer();
-    
+  
 
     return (
       <div style={style}>
@@ -60,6 +63,7 @@ const SearchBar = ({
             <SearchIcon />
           </IconButton>
           <InputBase
+            inputRef={ref}
             sx={
               theme === themeEnum.light
                 ? { ml: 1, flex: 1, backgroundColor: "#ECECEC" }
@@ -74,10 +78,16 @@ const SearchBar = ({
             inputProps={{ "aria-label": placeholder }}
             onChange={(e) => onSearch(e.target.value)}
             value={searchValue}
+            onKeyPress={(e: any) => {
+              console.log(e.keyCode, "code");
+              if (e.keyCode === 13) {
+                return false;
+              }
+            }}
           />
         </Paper>
       </div>
     );
-};
+});
 
 export default SearchBar;

@@ -11,11 +11,11 @@ const HomeIndex = () => {
 
 
   const {theme}=useThemeConsumer();
-  const {data, loading,  page, setPage,search,setSearch,hasMore,tags}=useFetchGallery();
+  const {data, loading,  page, setPage,search,setSearch,hasMore,tags,inputRef}=useFetchGallery();
 
   return (
       <div className={theme===themeEnum.light ? themeEnum.light : themeEnum.dark}>
-        <TopBar search={search} setSearch={setSearch}/>
+        <TopBar search={search} setSearch={setSearch} ref={inputRef}/>
         {loading===true && <Loader/>}
         { !search && <BannerIndex />}
        {loading ===false && <ImageGallery

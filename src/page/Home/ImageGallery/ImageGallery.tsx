@@ -148,7 +148,7 @@ const ImageGallery = ({
         }}
         dataLength={data?.length}
         hasMore={hasMore}
-        loader={"loading.."}
+        loader={<></>}
       >
         <ImageList
           variant="masonry"

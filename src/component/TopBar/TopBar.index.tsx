@@ -14,15 +14,15 @@ const Wrapper = styled("div")({
   alignItems:"center",
 });
 
-const TopBar = ({search,setSearch}:{search:string,setSearch:any}) => {
+const TopBar = React.forwardRef(({search,setSearch}:{search:string,setSearch:any},ref) => {
   return (
     <Wrapper>
       <Logo />
-      <SearchBar placeholder="Search Images here" searchValue={search} onSearch={setSearch}  style={{ width:" 26.1rem",paddingLeft: "4rem",paddingRight: "1.68rem",height: "2.6rem"}} />
+      <SearchBar ref={ref} placeholder="Search Images here" searchValue={search} onSearch={setSearch}  style={{ width:" 26.1rem",paddingLeft: "4rem",paddingRight: "1.68rem",height: "2.6rem"}} />
       <NavLinks />
       <Switcher />
     </Wrapper>
   );
-}
+})
 
 export default TopBar

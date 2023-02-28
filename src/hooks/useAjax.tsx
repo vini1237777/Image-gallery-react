@@ -1,8 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import useFetch from "./useFetch";
-
-const access_key = "7mvLD8H1fIPsZIXp7ysul1klXEnSCa-Vzs_Fp2gaLWc";
-const baseUrl = "https://api.unsplash.com/";
 
 const useAjax = () => {
   const [data, setData] = useState<any[]>([]);

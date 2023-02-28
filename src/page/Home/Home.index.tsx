@@ -11,7 +11,7 @@ const HomeIndex = () => {
 
 
   const {theme}=useThemeConsumer();
-  const {data, loading, error, setData, setLoading, page, setPage,search,setSearch,hasMore,tags}=useFetchGallery();
+  const {data, loading,  page, setPage,search,setSearch,hasMore,tags}=useFetchGallery();
 
   return (
       <div className={theme===themeEnum.light ? themeEnum.light : themeEnum.dark}>

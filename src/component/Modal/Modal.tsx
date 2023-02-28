@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Avatar, Box, Button, Dialog, DialogTitle, IconButton } from "@mui/material";
+import { Avatar,  Button, Dialog } from "@mui/material";
 import { styled } from "@mui/system";
 import { fontSmallDark, fontSmallGray } from "../../styles/font";
-import { Close, DownloadSharp, Info, Instagram, Share, ThumbUpAltOutlined, Twitter } from "@mui/icons-material";
+import { Info, Instagram, Share, ThumbUpAltOutlined, Twitter } from "@mui/icons-material";
 import Tags from "../Tags/Tags";
 import useThemeConsumer from "../ThemeProvider/useThemeConsumer";
 import { themeEnum } from "../ThemeProvider/ThemeProvider";

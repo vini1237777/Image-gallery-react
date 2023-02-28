@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@mui/system';
 import { colors } from '../../styles/colors';
-import { fontFamily, fontMedium, fontxl } from '../../styles/font';
+import { fontFamily, fontMedium } from '../../styles/font';
 
 interface IHeading {
   heading:string;

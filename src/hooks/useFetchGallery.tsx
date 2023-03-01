@@ -17,7 +17,6 @@ const inputRef=useRef();
 
  useEffect(() => {
      if (search){
-      console.log(inputRef?.current?.value,search,'search');
       const timer = setTimeout(() => {
         if (search === inputRef?.current?.value) {
           request(
@@ -61,6 +60,7 @@ const inputRef=useRef();
      }
    
  }, [page,search]);
+
 
 
   return {data, loading, error, setData, setLoading, page, setPage,search,setSearch,hasMore:totalPages>page,tags,inputRef}

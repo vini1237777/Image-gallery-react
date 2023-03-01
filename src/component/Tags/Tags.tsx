@@ -34,7 +34,6 @@ const Tags = ({names,sx}:ITags) => {
           gap: "1rem",
         }}
        sx={sx}
-      //  value={names.length && ''}
       >
         {names?.map((name: string,index:number) => {
           return (

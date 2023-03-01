@@ -8,7 +8,6 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import useThemeConsumer from "../ThemeProvider/useThemeConsumer";
 import { themeEnum } from "../ThemeProvider/ThemeProvider";
-import useFetchGallery from "../../hooks/useFetchGallery";
 
 interface ISearchBar {
   placeholder: string;

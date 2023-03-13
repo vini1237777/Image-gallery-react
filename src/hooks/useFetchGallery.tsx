@@ -32,7 +32,9 @@ const inputRef=useRef();
               }
               const titles=newData.reduce((acc,item)=>{
                 return [...new Set([...acc,...item.tags])]
-              },[]).map((tag)=>{
+              },[]).filter((tag)=>{
+                return tag.title !== undefined
+              }).map((tag)=>{
                 return tag.title
               });
               // setTags([...new Set([...tags, ...titles])]);

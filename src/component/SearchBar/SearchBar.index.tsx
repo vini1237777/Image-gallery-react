@@ -78,7 +78,6 @@ const SearchBar = React.forwardRef(({
             onChange={(e) => onSearch(e.target.value)}
             value={searchValue}
             onKeyPress={(e: any) => {
-              console.log(e.keyCode, "code");
               if (e.keyCode === 13) {
                 return false;
               }

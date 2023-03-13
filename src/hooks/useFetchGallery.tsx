@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useEffect, useRef, useState } from 'react'
+import  { useEffect, useRef, useState } from 'react'
 import useAjax from './useAjax';
 
 const baseUrl = "https://api.unsplash.com/";
@@ -25,7 +25,8 @@ const inputRef=useRef();
             .then((res) => {
               const newData: any[] = res.results;
               if (page>1){
-                setData([...data, ...newData]);
+                // setData([...data, ...newData]);
+                setData((prev)=>{return [...prev,...newData]});
               } else {
                 setData(newData);
               }
@@ -34,7 +35,9 @@ const inputRef=useRef();
               },[]).map((tag)=>{
                 return tag.title
               });
-              setTags([...new Set([...tags, ...titles])]);
+              // setTags([...new Set([...tags, ...titles])]);
+              setTags((prev)=>{return [...new Set([...prev, ...titles])];});
+              
               setTotalPages(res?.total_pages);
             })
             .catch(() => {
@@ -59,7 +62,7 @@ const inputRef=useRef();
         .finally(() => setLoading(false));
      }
    
- }, [page,search]);
+ }, [page,search,setData,setError,setLoading,request]);
 
 
 

@@ -12,9 +12,9 @@ const NavLinksWrapper = styled("div")({
 });
 
 const links=[
-          { title: "Explore", to: "" },
-          { title: "Collection", to: "" },
-          { title: "Community", to: "" },
+          { key:1,title: "Explore", to: "" },
+          { key:2,title: "Collection", to: "" },
+          { key:3,title: "Community", to: "" },
         ]
 
 const NavLinks = () => {
@@ -25,6 +25,7 @@ const NavLinks = () => {
           <Typography
             sx={fontSmallDark}
             onClick={() => <Navigate to={link.to || ""} />}
+            key={link.key}
           >
             {link?.title}
           </Typography>
